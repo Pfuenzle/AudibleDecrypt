@@ -1,0 +1,11 @@
+---
+    version: "3"
+    services:
+        audible:
+            build: ./
+            container_name: audible
+            volumes:
+                - ./data:/app/audiobooks
+            environment:
+                - BITRATE=128k
+                - FORMAT=m4b
